@@ -75,7 +75,8 @@ OmicSelector_benchmark = function(wd = getwd(), search_iters = 2000, keras_epoch
 
   if(!dir.exists("temp")) { dir.create("temp") }
 
-  use_condaenv("tensorflow")
+  #use_condaenv("tensorflow")
+  use_condaenv("tf")
   zz <- file(paste0("temp/benchmark",stamp,".log"), open = "wt")
   pdf(paste0("temp/benchmark",stamp,".pdf"))
   sink(zz)
